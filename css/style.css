@@ -1,0 +1,798 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: block;
+}
+
+
+/*HEADER*/
+
+.background {
+    position: absolute;
+    background: linear-gradient(45deg, #C9D2F1, #EDE0D0, #FFE8BF);
+    height: 750px;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px 50px 100px;
+}
+
+.header_menu {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.header_menu_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+
+.header_menu_item {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0E0807;
+    padding: 0 30px;
+}
+
+
+.header_menu_link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0E0807;
+}
+
+.header_button {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: #c2cdf3;
+    box-shadow: blue;
+}
+
+.header_button_element {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #0E0807;
+    left: 10px;
+}
+
+.header_button_element:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header_button_element:nth-child(3) {
+    transform: translateY(10px);
+}
+
+
+/*при сжатии до 320px для header меню должно свернуться в одну кнопку,
+но не получилось(*/
+
+@media (max-width: 340px) {
+    .header_button {
+        display: block;
+        z-index: 2;
+    }
+
+
+    .header_menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: linear-gradient(70deg, #bac6f1, #fae1b6);
+        margin-left: 0;
+        padding: 120px 20px 20px 20px;
+        z-index: 1;
+    }
+
+    .header_menu_list {
+        display: block;
+        text-align: start;
+    }
+
+    /*как элементы меню выровнять по левому краю?*/
+
+    .header_menu_link {
+        color: white;
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+    }
+}
+
+/*COMPANY DESCRIPTION*/
+
+.company_description {
+    padding: 50px 100px;
+
+}
+
+.company_description_container {
+
+    padding: 100px 170px;
+}
+
+.company_description_text {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 89px;
+    color: #443836;
+    word-wrap: none;
+    padding: 30px;
+}
+
+@media (max-width: 1805px) {
+    .company_description_text {
+        font-family: 'Raleway', sans-serif;
+        font-style: normal;
+        font-weight: 150;
+        font-size: 50px;
+        color: #443836;
+        word-wrap: none;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .company_description_text {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 40px;
+        line-height: 60%;
+        color: #443836;
+        word-wrap: break-word;
+    }
+}
+
+@media (max-width: 720px) {
+    .company_description_text {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 80;
+        font-size: 30px;
+        line-height: 40%;
+        color: #443836;
+        word-wrap: none;
+    }
+}
+
+/*PROJECTS*/
+
+.projects {
+    display: block;
+    padding: 50px 100px 50px 100px;
+}
+
+
+.projects_line {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+
+@media (max-width: 900px) {
+    .projects_line {
+        flex-wrap: wrap;
+    }
+}
+
+.projects_description {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125.69%;
+    align-items: center;
+    letter-spacing: 0.02em;
+    color: #000000;
+    padding: 20px;
+}
+
+.projects_1 {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.projects_2 {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.projects_3 {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.projects_4 {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.projects_5 {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.projects_6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects_7 {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects_8 {
+    display: flex;
+    flex-direction: column;
+}
+
+/*VIDEO*/
+
+.video {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, #C9D2F1, #EDE0D0, #FFE8BF);
+    width: auto;
+    padding: 100px 50px 0 50px;
+}
+
+.video_description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 132%;
+    letter-spacing: -0.015em;
+    color: #443836;
+    word-wrap: break-word;
+}
+
+/*
+.video_white_space {
+    position: absolute;
+    background: #F5F5F5; 
+    width: 100%;
+    height: 200px;
+}
+*/
+
+
+.video_space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 40px 100px 40px;
+}
+
+/*CLIENTS*/
+
+.clients {
+    display: block;
+    background: #F5F5F5;
+    width: auto;
+    padding: 0 100px 0 100px;
+}
+
+
+.clients_description_text {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 133%;
+    letter-spacing: -0.01em;
+    color: #443836;
+    padding: 100px 300px 15px 20px;
+    word-wrap: break-word;
+}
+
+/*как сделать логотипы серого цвета как на референсе?*/
+.clients_row_1 {
+    display: flex;
+    gap: 20px;
+    padding: 50px 100px 50px 100px;
+    justify-content: space-between;
+}
+
+.clients_row_2 {
+    display: flex;
+    gap: 20px;
+    padding: 30px 100px 200px 100px;
+    justify-content: space-between;
+}
+
+/*BANNER*/
+
+/*как сделать так, чтобы розового цвета было больше?*/
+.banner {
+    background: linear-gradient(70deg, #C9D2F1, #FFE8BF);
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 200px 100px 200px;
+}
+
+.banner_column_1 {
+    padding: 0 20px 20px 100px;
+}
+
+.banner_column_2 {
+    padding: 0 20px 20px 20px;
+}
+
+.banner_column_3 {
+    padding: 0 100px 20px 20px;
+}
+
+.banner_column_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 144px;
+    line-height: 126%;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #0E0807;
+}
+
+.banner_column_description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+/*SERVISES 1*/
+
+.servises_block {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 100px 50px 100px;
+}
+
+.servises_block_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 126%;
+    letter-spacing: -0.09em;
+    color: #000000;
+}
+
+.servises_block_column_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 126%;
+    letter-spacing: -0.09em;
+    color: #000000;
+    padding-bottom: 30px;
+}
+
+.servises_block_column_description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: #000000;
+}
+
+.servises_block_column_1 {
+    padding: 40px 20px 40px 20px;
+}
+
+.servises_block_title {
+    padding: 30px 20px 40px 0px;
+}
+
+.servises_block_column_2 {
+    padding: 40px 20px 40px 20px;
+}
+
+.servises_block_column_3 {
+    padding: 40px 0px 40px 20px;
+}
+
+/*TEAM*/
+
+.team {
+    display: inline-block;
+    padding: 50px 100px 50px 100px;
+    width: 100%;
+}
+
+.team_header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    color: #000000;
+    padding-bottom: 50px;
+}
+
+.team_members {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/*BRANDING*/
+.branding {
+    display: block;
+}
+
+.branding_description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 126%;
+    letter-spacing: -0.09em;
+    color: #443836;
+    padding: 100px 600px 50px 100px;
+    word-wrap: break-word;
+}
+
+.branding_examples {
+    display: flex;
+    padding: 50px 100px 100px 100px;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.branding_example_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 105%;
+    color: #000000;
+    padding: 20px 0 20px 0;
+}
+
+.branding_example_description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 135%;
+    color: #000000;
+    word-wrap: break-word;
+    max-width: 450px;
+}
+
+
+/*REVIEWS*/
+
+.face {
+    width: 80px;
+    border-radius: 50%;
+    padding: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.photographer_name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.reviews {
+    display: block;
+    padding: 120px;
+    background: #F4F5F7;
+}
+
+.review_header {
+    margin-bottom: 50px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 126%;
+    letter-spacing: -0.09em;
+    font-feature-settings: 'liga' off;
+    color: #000000;
+}
+
+.review_blocks {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .review_blocks {
+        flex-wrap: wrap;
+    }
+}
+
+.review_block {
+    justify-content: normal;
+    width: 350px;
+    gap: 20px;
+}
+
+.review_form {
+    /*justify-content: normal;*/
+    background: url(../images/form_for_review.png);
+    background-size: 350px 250px;
+    background-repeat: no-repeat;
+    width: 350px;
+    height: 250px;
+    color: black;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    /*margin: 20px; */
+}
+
+.review_form_caption {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+.review_form_text {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+
+/*SERVISES 2*/
+
+.servises_2 {
+    display: block;
+    padding: 100px;
+}
+
+.servises_2_header {
+    padding: 20px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 126%;
+    letter-spacing: -0.09em;
+    font-feature-settings: 'liga' off;
+    color: #000000;
+}
+
+.servises_2_block {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+    .servises_block {
+        flex-wrap: wrap;
+    }
+}
+
+.servises_2_block_title {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 105%;
+    font-feature-settings: 'liga' off;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.servises_2_block_description {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+.servises_2_block_1 {
+    justify-content: flex-start;
+    background: url(../images/colorized_block_1.jpg);
+    max-width: 743px;
+    height: 283px;
+    color: #ffff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 20px;
+}
+
+.servises_2_block_2 {
+    justify-content: flex-end;
+    background: url(../images/colorised_block_2.jpg);
+    max-width: 743px;
+    height: 283px;
+    color: #ffff;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    margin: 20px;
+}
+
+.servises_href {
+    color: #ffff;
+    padding: 20px;
+}
+
+/*FOOTER*/
+
+.footer {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 50px 100px 100px 100px;
+}
+
+.footer_first_column {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0px 60px;
+}
+
+.footer_first_column_logo {
+    padding: 0 0 50px 0;
+}
+
+.footer_first_column_description {
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 32px;
+    color: #0E0807;
+}
+
+.footer_first_column_social_network_icons {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.footer_second_column {
+    padding: 20px 20px 20px 20px;
+}
+
+.footer_column_title {
+    max-width: 341px;
+    max-height: 41px;
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 40px;
+    color: #2F3337;
+    padding: 0 0 50px 0;
+}
+
+.footer_column_description {
+    max-width: 341px;
+    max-height: 33px;
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.7257px;
+    line-height: 32px;
+    color: #0E0807; 
+}
+
+.footer_column_description_icon {
+    width: 341px;
+    height: 33px;
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18.7257px;
+    line-height: 32px;
+    color: #0E0807; 
+    padding-left: 10px;
+}
+
+.footer_third_column {
+    padding: 20px 20px 20px 20px;
+}
+
+
+.footer_forth_column {
+    display: inline-block;
+    padding: 20px 60px 20px 20px;
+}
+
+.footer_forth_column_email {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 32px;
+    color: #0E0807;
+    padding-bottom: 20px;
+}
+
+.footer_forth_column_phone {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 32px;
+    color: #0E0807;
+    padding-bottom: 20px;
+}
+
+.footer_forth_column_location {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Manrope', 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 32px;
+    color: #0E0807;
+}
+
+
